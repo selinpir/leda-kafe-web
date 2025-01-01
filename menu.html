@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Leda Kafe</title>
+    <style>
+    h3 {
+        margin: 20px 0;
+        padding: 10px 0; 
+        text-align: center;
+        font-size: 28px; 
+        color: #3e2723; 
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="img/logo1.png" alt="Leda Kafe Logo">
+        Leda Kafe
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Anasayfa</a>
+        <a href="index.html#about">Hakkımızda</a>
+        <a href="#menu">Menü</a>
+        <a href="index.html#contact">İletişim</a>
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <video autoplay loop muted playsinline style="width: 100%; height: auto;">
+                <source src="img/video.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <div class="text">Aralık Ayında Geçerlidir.</div>
+          </div>
+          
+        <div class="mySlides fade">
+            <img src="img/1.jpg" alt="Lezzetli Yiyecekler">
+            <div class="text">Lezzetli Yiyecekler</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src="img/3.jpg" alt="Kahve ve kekler">
+            <div class="text">Sıcak Kahveler</div>
+        </div>
+        
+
+        <div class="mySlides fade">
+            <img src="img/2.jpg" alt="Konforlu İç Mekan">
+            <div class="text">Taze kekler</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+
+    <div style="text-align: center;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <section id="menu" class="menu-section">
+        <h2 class="menu-title">Menümüz</h2>
+        <div class="menu-tabs">
+            <button class="tab-button active" onclick="openCategory(event, 'kahve')">Kahveler</button>
+            <button class="tab-button" onclick="openCategory(event, 'tatli')">Tatlılar</button>
+            <button class="tab-button" onclick="openCategory(event, 'kahvalti')">Kahvaltı</button>
+        </div>
+    
+        <div id="kahve" class="menu-category active">
+            <h3>Kahveler</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/es.jpg" alt="Espresso">
+                    <div class="item-info">
+                        <span class="item-name">Espresso</span>
+                        <span class="item-price">25 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/latte.jpg" alt="Latte">
+                    <div class="item-info">
+                        <span class="item-name">Latte</span>
+                        <span class="item-price">30 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/ca.jpg" alt="Cappuccino">
+                    <div class="item-info">
+                        <span class="item-name">Cappuccino</span>
+                        <span class="item-price">30 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/türk.jpg" alt="Türk Kahvesi">
+                    <div class="item-info">
+                        <span class="item-name">Türk Kahvesi</span>
+                        <span class="item-price">20 TL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="tatli" class="menu-category">
+            <h3>Tatlılar</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/Cheesecake.jpg" alt="Cheesecake">
+                    <div class="item-info">
+                        <span class="item-name">Cheesecake</span>
+                        <span class="item-price">40 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/Çikolatalı Kek.jpg" alt="Çikolatalı Kek">
+                    <div class="item-info">
+                        <span class="item-name">Çikolatalı Kek</span>
+                        <span class="item-price">35 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/makaron.jpg" alt="Makaron">
+                    <div class="item-info">
+                        <span class="item-name">Makaron</span>
+                        <span class="item-price">15 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/Tiramisu.jpg" alt="Tiramisu">
+                    <div class="item-info">
+                        <span class="item-name">Tiramisu</span>
+                        <span class="item-price">40 TL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="kahvalti" class="menu-category">
+            <h3>Kahvaltı</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="img/Kahvaltı Tabağı.jpg" alt="Simit Tabağı">
+                    <div class="item-info">
+                        <span class="item-name">Simit Tabağı</span>
+                        <span class="item-price">35 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/Simit Tabağı.jpg" alt="Kahvaltı Tabağı">
+                    <div class="item-info">
+                        <span class="item-name">Kahvaltı Tabağı</span>
+                        <span class="item-price">70 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/omlet.jpg" alt="Omlet">
+                    <div class="item-info">
+                        <span class="item-name">Omlet</span>
+                        <span class="item-price">40 TL</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="img/pancake.jpg" alt="Pancake">
+                    <div class="item-info">
+                        <span class="item-name">Pancake</span>
+                        <span class="item-price">45 TL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function openCategory(evt, categoryName) {
+            let i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("menu-category");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(categoryName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+<div class="footer">
+    <p>Bu site W3Schools Spaces ile yapılmıştır.</p>
+    <p>Tüm hakları saklıdır. &copy; Leda Kafe</p>
+  </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+
+
+</body>
+</html>
